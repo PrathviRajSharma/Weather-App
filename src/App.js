@@ -27,21 +27,21 @@ function App() {
   }
   return (
     <>
-      <div class="container">
-        <div class="background-image"></div>
-        <div class="content">
-          <form class="search-bar" onSubmit={gettingData}>
+      <div className="container">
+        <div className="background-image"></div>
+        <div className="content">
+          <form className="search-bar" onSubmit={gettingData}>
             <input type="text" placeholder="Search City" value={city} onChange={(event) => { setCity(event.target.value) }} />
           </form>
 
           {weatherDetails !== undefined ?
             <>
-              <div class="city-name">
+              <div className="city-name">
                 <h1>{weatherDetails.name}<span className='country'>{weatherDetails.sys.country}</span> </h1> <sup>{weatherDetails.weather[0].main}</sup> 
               </div>
-              <div class="weather-info">
+              <div className="weather-info">
                 <img src={`https://openweathermap.org/img/w/${weatherDetails.weather[0].icon}.png`} alt="Image not Found" />
-                <div class="temperature">
+                <div className="temperature">
                   <span>{weatherDetails.main.temp} </span> 
                   <sup className='degreeCel'>°C</sup>
                 </div>

@@ -26,7 +26,7 @@ function CurrentDateTime() {
 
     return (
 
-        <div class="date-time">
+        <div className="date-time">
             <p>{getFormattedDate()}</p>
             <p className='time'>{dateTime.toLocaleTimeString()}</p>
         </div>
